@@ -12,6 +12,6 @@ namespace Mango.Services.ProductApi.Models
         public double Price { get; set; }
         public string Description { get; set; }
         public string CategoryName { get; set; }
-        public string ImagUrl { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

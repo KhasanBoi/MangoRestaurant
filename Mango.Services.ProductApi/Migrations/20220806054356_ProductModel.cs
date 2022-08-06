@@ -19,7 +19,7 @@ namespace Mango.Services.ProductApi.Migrations
                     Price = table.Column<double>(type: "double precision", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
                     CategoryName = table.Column<string>(type: "text", nullable: false),
-                    ImagUrl = table.Column<string>(type: "text", nullable: false)
+                    ImageUrl = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

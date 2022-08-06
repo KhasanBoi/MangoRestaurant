@@ -37,7 +37,7 @@ namespace Mango.Services.ProductApi.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("ImagUrl")
+                    b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("text");
 

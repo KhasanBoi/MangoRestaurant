@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Mango.Services.ProductApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220728094856_ProductModel")]
+    [Migration("20220806054356_ProductModel")]
     partial class ProductModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace Mango.Services.ProductApi.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("ImagUrl")
+                    b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("text");
 
