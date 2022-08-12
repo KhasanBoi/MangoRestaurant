@@ -1,9 +1,9 @@
-﻿namespace Mango.Services.ProductApi.Dtos.ProductDtos
+﻿namespace Mango.Services.ProductApi.Dtos
 {
-    public class ResponseProductDto
+    public class ResponseDto
     {
         public bool Success { get; set; } = true;
-        public  object Data { get; set; }
+        public object Data { get; set; }
         public string Message { get; set; } = string.Empty;
         public List<string> ErrorMessages { get; set; }
     }

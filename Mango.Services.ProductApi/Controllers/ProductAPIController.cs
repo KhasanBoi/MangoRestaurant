@@ -1,4 +1,5 @@
-﻿using Mango.Services.ProductApi.Dtos.ProductDtos;
+﻿using Mango.Services.ProductApi.Dtos;
+using Mango.Services.ProductApi.Dtos.ProductDtos;
 using Mango.Services.ProductApi.Repositories.ProductRepository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,17 +8,17 @@ namespace Mango.Services.ProductApi.Controllers
     [Route("api/products")]
     public class ProductAPIController : ControllerBase
     {
-        protected ResponseProductDto _response;
+        protected ResponseDto _response;
         private readonly IProductRepository _productRepository;
 
         public ProductAPIController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-            this._response = new ResponseProductDto();
+            this._response = new ResponseDto();
         }
 
         [HttpGet]
-        public async Task<ResponseProductDto> Get()
+        public async Task<ResponseDto> Get()
         {
             try
             {
@@ -35,7 +36,7 @@ namespace Mango.Services.ProductApi.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<ResponseProductDto> Get(int id)
+        public async Task<ResponseDto> Get(int id)
         {
             try
             {
@@ -52,7 +53,7 @@ namespace Mango.Services.ProductApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ResponseProductDto> Post([FromBody] ProductDto productDto)
+        public async Task<ResponseDto> Post([FromBody] ProductDto productDto)
         {
             try
             {
@@ -69,7 +70,7 @@ namespace Mango.Services.ProductApi.Controllers
         }
 
         [HttpPut]
-        public async Task<ResponseProductDto> Put([FromBody] ProductDto productDto)
+        public async Task<ResponseDto> Put([FromBody] ProductDto productDto)
         {
             try
             {
@@ -86,7 +87,7 @@ namespace Mango.Services.ProductApi.Controllers
         }
 
         [HttpDelete]
-        public async Task<ResponseProductDto> Delete(int id)
+        public async Task<ResponseDto> Delete(int id)
         {
             try
             {
